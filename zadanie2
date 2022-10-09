@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+
+int main()
+{
+    int n, sum, pr;
+    sum=0;
+    pr=1;
+    printf("n=");
+    scanf_s("%d", &n);
+    for (int a=0; a<=n; a+=3)
+    {
+        sum=sum+a;
+    }
+    for (int c=n-n%3, d=0; c>=1; c-=3)
+    {
+     pr=pr*c;
+    } 
+    printf("sum = %d\n", sum);
+    printf("pr = %d\n", pr);
+    getchar();
+    return 0;
+}
