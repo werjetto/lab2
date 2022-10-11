@@ -2,7 +2,7 @@
 int main()
 {
     float X;
-    int result, factorial, mypow;
+    int result, factorial, mypow, x;
     unsigned int N;
     result=0;
     mypow=1;
@@ -11,11 +11,14 @@ int main()
     scanf_s("%e", &X);
     printf("N=\n");
     scanf_s("%d", &N);
-    for (int i=1; i<=2*N+1; i+=2)
+    for (int i=1; i<=2*N+1; i++)
      {
-        mypow = mypow * -X;
         factorial = 1 * i;
-        result = result + mypow/ factorial;
+        if (i % 2 == 1)
+        {
+        mypow = mypow * -X;
+        result = result + mypow/factorial;
+        }
      }
     printf("result = %d\n", result);
     return 0;
