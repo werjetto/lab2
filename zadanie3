@@ -1,23 +1,31 @@
 #include <stdio.h>
+ int mypow(int h, int n)
+ {
+    for (int i = 1; i <= n; i++)
+    {  
+        h = 1 * h;
+    }
+    return h;
+ }
 int main()
 {
     float X;
-    int result, factorial, mypow, x;
+    int result, factorial, g;
     unsigned int N;
-    result=0;
-    mypow=1;
+    result=X;
     factorial=1;
     printf("X=");
-    scanf_s("%e", &X);
+    scanf("%e", &X);
     printf("N=\n");
-    scanf_s("%d", &N);
-    for (int i=1; i<=2*N+1; i++)
+    scanf("%d", &N);
+    for (int l=1; l<=2*N+1; l++)
      {
-        factorial = 1 * i;
-        if (i % 2 == 1)
+        factorial = 1 * l;
+        g = mypow (X,l);
+        if (l % 2 == 1)
         {
-        mypow = mypow * -X;
-        result = result + mypow/factorial;
+        g = g * -1;
+        result = result + g/factorial;
         }
      }
     printf("result = %d\n", result);
